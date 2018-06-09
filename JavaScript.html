@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <style>
+    p{
+        color: cornflowerblue;
+        font-size: 14px;
+    }
+    hr{
+        width: 400px;
+        margin-left: 2px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    </style>
+</head>
+<body>
+    <h2>1.字符串（String）</h2>
+    
+            <p>外双内单  //  外单内双</p>
+            <p>var name = “He is called ‘diudiu’ .” ;</p>
+            <p>var name = ‘He is called “diudiu” .’ ;</p>         
+    
+    <script>
+        var name = "He is called 'diudiu' ." ;
+        document.write(name);
+        document.write("<br>");
+        var name = 'He is called "diudiu" .' ;
+        document.write(name);
+    </script>
+    <hr>
+        <p style="color: crimson">{反例}</p>
+        <p>“ We are the so-called “ Vikings ” from the north. ”</p>
+        <p>打印不出来</p>
+        
+    <script>
+       // var name ="We are the so-called " Vikings " from the north.";
+        document.write("<br>");
+    </script>
+        <hr>
+        <p>添加转义字符来使用引号</p>
+        <p>var answer = “ He is called \ “ diudiu \ ” ” ; </p>  
+    <script>
+        var name = "He is called \"diudiu\".";
+        document.write(name);
+    </script>
+        <hr>
+        <p>length计算字符串的长度（标点符号，空格也算）</p>
+    <script>
+        var name = "I am diudiu." ;
+        var num = name.length;
+        document.write(name);
+        document.write("<br>");
+        document.write("长度:"+num);
+    </script>
+        <hr>
+        <p>constructor 返回创建字符串属性的函数</p>   
+        <p>prototype 语序您向对象添加属性和方法</p> 
+        <hr>
+        <p>字符串可以做为对象（不提倡）</p>
+        <p>var x = “diu” ;</p>
+        <p>var y = new String (“diu”);</p>
+        <p>typeof  x    //returns  string</p>
+        <p>typeof  y    //returns  object</p>
+                
+    <script>
+        var x = "diu" ;
+        var y = new String ("diu"); 
+        document.write(typeof  x+"<br>");    
+        document.write(typeof  y);  
+    </script>
+        <hr>
+    <pre>
+                Method	                描述
+            charAt()	        返回指定索引位置的字符
+            charCodeAt()	    返回指定索引位置字符的 Unicode 值
+            concat()	        连接两个或多个字符串，返回连接后的字符串
+            fromCharCode()	    将字符转换为 Unicode 值
+            indexOf()	        返回字符串中检索指定字符第一次出现的位置
+            lastIndexOf()	    返回字符串中检索指定字符最后一次出现的位置
+            localeCompare()	    用本地特定的顺序来比较两个字符串
+            match()	            找到一个或多个正则表达式的匹配
+            replace()	        替换与正则表达式匹配的子串
+            search()	        检索与正则表达式相匹配的值
+            slice()	            提取字符串的片断，并在新的字符串中返回被提取的部分
+            split()	            把字符串分割为子字符串数组
+            substr()	        从起始索引号提取字符串中指定数目的字符
+            substring()	        提取字符串中两个指定的索引号之间的字符
+            toLocaleLowerCase()	根据主机的语言环境把字符串转换为小写，只有几种语言（如土耳其语）具有地方特有的大小写映射
+            toLocaleUpperCase()	根据主机的语言环境把字符串转换为大写，只有几种语言（如土耳其语）具有地方特有的大小写映射
+            toLowerCase()	    把字符串转换为小写
+            toString()	        返回字符串对象值
+            toUpperCase()	    把字符串转换为大写
+            trim()	            移除字符串首尾空白
+            valueOf()	        返回某个字符串对象的原始值      
+    </pre>
+        <hr>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    <h2>2.数字（Number）</h2>
+    <p>var  x1 = 7;</p>
+    <p>var  x2 = 7.0;</p>
+    <p>var  x3 = 7.7</p>
+    <p>var  x4 = 123e5</p>
+    <p>var  x5 = 123e-5</p>
+    <script>
+        var x1 = 7;
+        var  x2 = 7.0;
+        var  x3 = 7.7;
+        var  x4 = 123e5;
+        var  x5 = 123e-5
+        document.write(x1+"<br>");
+        document.write(x2+"<br>");
+        document.write(x3+"<br>");
+        document.write(x4+"<br>");
+        document.write(x5+"<br>");
+    </script>
+        <hr>
+        <br>
+        <br>
+        <br>
+        <br>
+    
+    <h2>3.布尔（Boolean）</h2>
+    <p>var  x1 = true;</p>
+    <p>var  x2 = false;</p>
+    <script>
+        var  x1 = true;
+        var  x2 = false;
+        document.write(x1+"<br>");
+        document.write(x2+"<br>");
+    </script>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h2>4.数组（Array）</h2>
+    <p>var  cars = new Array( );</p>
+    <p>cars[0] = “Saab” ;</p>
+    <p>cars[1] = “Volvo” ;</p>
+    <p>cars[2] = “Bmw” ;</p>
+    <script>
+    var i;
+    var cars = new Array();
+    cars[0] = "Saab";
+    cars[1] = "Volvo";
+    cars[2] = "BMW";
+
+    for (i=0;i<cars.length;i++)
+    {
+    document.write(cars[i] + "<br>");
+    }
+    </script>
+    <br>
+    <p>var  cars = new Array ( “Saab” , “Volvo” , “Bmw” );</p>
+    <script>
+    var  cars = new Array ( "Saab" , "Volvo" , "Bmw" );
+    var i;
+    for (i=0;i<cars.length;i++)
+    {
+    document.write(cars[i] + "<br>");
+    }
+    </script>
+    <br>
+    <p>var  cars = [ “Saab” , “Volvo” , “Bwm” ];</p>
+    <script>
+    var  cars = [ "Saab" , "Volvo" , "Bmw" ];
+    var i;
+    for (i=0;i<cars.length;i++)
+    {
+    document.write(cars[i] + "<br>");
+    }
+    </script>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h2>5.空（Null）</h2>
+    <p>（1）变量的值设置为null来清空变量</p>
+
+    <script>
+        var person;
+        var car="Volvo";
+        document.write(person + "<br>");
+        document.write(car + "<br>");
+        var car=""
+        document.write(car + "<br>");
+    </script>
+    <p>（2）逻辑上null表示一个空对象的指针</p>
+    
+    <p>（3）使用typeof检测时会返回<font style="color: red">string</font>(objec)</p>
+    <script>
+    var name = null;
+    document.write("typeof Null:"+typeof name);
+    </script>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <h2>6.未定义（Undefined）</h2>
+    <p>（1）区分空对象指针与尚未定义的变量</p>
+    <p style="color:red">（2）使用var声明变量但未初始化</p>
+    <p style="color:red">（3）对未初始化的变量及未声明的变量使用typeof运算符均会返回undefined</p>
+    <script>
+    var name;
+    document.write(name+"<br>"+typeof name);
+    </script>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <h2>7.对象（Object）</h2>
+    <p>对象的属性以名称和值对的形式（name : value）</p>
+    <p>var  person = { firstname : “John” , lastname : “Doe” , id : 5566 } ;</p>  
+    <p>寻址方式：</p>
+    <p>name = person.lastname ;</p>
+    <p>name = person [ “lastname” ] ;</p>
+    <script>
+    var  person = { firstname : "John" , lastname : "Doe" , id : 5566 } ;
+    var name1 = person.lastname ;
+    var name2 = person [ "id" ] ;
+    document.write(person+"<br>");
+    document.write(name1+"<br>");
+    document.write(name2+"<br>");
+    </script>
+</body>
+</html>
